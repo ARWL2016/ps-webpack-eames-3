@@ -9,7 +9,7 @@ module.exports = {
 		filename: "bundle.js"
 	},
 	devServer: {
-		contentBase: 'public'
+		contentBase: 'public' //the middleware will override this
 	},
 
 	module: {

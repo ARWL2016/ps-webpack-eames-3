@@ -5,15 +5,15 @@ var routes = require('./routes/index');
 
 var app = express();
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views')); //location of views
 app.set('view engine', 'ejs');
 
-app.use(logger('dev'));
+app.use(logger('dev')); //initialise the logger
 
 app.use('/', routes);
 
 // Only load this middleware in dev mode (important).
-if (app.get('env') === 'development') {
+if (app.get('env') === 'development') { //development env is default in node
   var webpackMiddleware = require("webpack-dev-middleware");
   var webpack = require('webpack');
 
